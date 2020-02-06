@@ -3,7 +3,7 @@ function onSignIn(googleUser) {
     const signInButton = document.getElementById('signInButton')
     const signOutButton = document.getElementById('signOutButton')
 
-    if (onSignIn()) {
+    if (onclick(onSignIn())) {
         signInButton.style.display = 'none'
         signOutButton.style.display = 'block'
     } else {
