@@ -8,11 +8,11 @@ function onSignIn(googleUser) {
     console.log('Image URL: ' + profile.getImageUrl());
     console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
 }
-onSignIn()
+onSignIn(googleuser)
 
-function updateStatus(onSignIn) {
+function updateStatus() {
 
-    if (onSignIn === true) {
+    if (googleUser === true) {
         signInButton.style.display = 'none'
         signOutButton.style.display = 'block'
     } else {
@@ -21,4 +21,4 @@ function updateStatus(onSignIn) {
     }
 
 }
-updateStatus(onSignIn())
+updateStatus()
