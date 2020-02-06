@@ -21,3 +21,5 @@ function updateStatus(onSignIn) {
     }
 
 }
+
+updateStatus(onSignIn())
