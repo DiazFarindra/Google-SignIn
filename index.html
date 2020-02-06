@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="google-signin-client_id" content="359895804402-req6n2li2rtirkdd3an0a2m01eecv7ii.apps.googleusercontent.com">
+    <meta name="google-signin-client_id" content="359895804402-dtknedm9b8pa3q4abkb48ncm9246s5hd.apps.googleusercontent.com">
 
 
     <style>
@@ -34,9 +34,17 @@
         function signOut() {
             var auth2 = gapi.auth2.getAuthInstance();
             auth2.signOut().then(function () {
+
+                const signInButton = document.getElementById('signInButton')
+                const signOutButton = document.getElementById('signOutButton')
+
+                signInButton.style.display = 'block'
+                signOutButton.style.display = 'none'
+
                 console.log('User signed out.');
             });
         }
+        signOut()
     </script>
 </body>
 </html>
